@@ -9,7 +9,7 @@ Created on Tue Sep 25 21:30:39 2018
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-
+from sklearn.linear_model import LinearRegression
 
 # data cleaning
 
@@ -32,6 +32,11 @@ from sklearn.impute import SimpleImputer
 #from sklearn.preprocessing import Imputer
 imputer = SimpleImputer(missing_values =np.nan,strategy = 'median')
 df_x[:,1:4] = imputer.fit_transform(df_x[:,1:4])
+
+
+
+plt.scatter(df_x,df_y)
+
 
 print ("hello2_na's")
 
@@ -59,6 +64,10 @@ print("*******************************************************")
 
 # add new columns
 
+
+
+
+
 from sklearn.preprocessing import OneHotEncoder
 hot_encoder = OneHotEncoder(categorical_features = [0])
 df_x= hot_encoder.fit_transform(df_x).toarray()
@@ -71,8 +80,10 @@ print(df_x)
 print ("df_y******************")
 print(df_y)
 print("*******************************************************")
-
-
+plt.xlabel("aaaa")
+plt.ylabel("abbbb")
+model=LinearRegression().fit(df_x,df_y)
+plt.scatter(df_x,model.predict(df_x),color='red')
 #print(df)
 #print(df)
 #print(df)
