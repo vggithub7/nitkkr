@@ -84,7 +84,7 @@ void  main(){
 	new_node45->next=new_node43;
 	new_node54->next=new_node51;
 	new_node51->next=new_node52;
-printf("kuch bhi");
+printf("kuch bhi checkpoint 1");
 getch();
 
 	for(i=1;i<=n_O_vert;i++){
@@ -94,7 +94,7 @@ getch();
 		myval=graph[i]->data;
 		printf("2 vertices are **********  %d    and    %d    \n",i,graph[i]->data);
 		graph[i]=NULL;
-        printf("kuch bhi");
+        printf("kuch bhi checkpoint 2");
         getch();
 		for(j=i+1;j<=5;j++)
 		{	if(graph[j]->data==myval)
