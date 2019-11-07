@@ -13,5 +13,6 @@ else:
    print("Fibonacci sequence:")  
    for i in range(nterms):  
        print(recur_fibo(i))  
-#print("enter till when you want fibbo series")
-#input("prompt: ")
+input("prompt: ")
+         #print("enter till when you want fibbo series")
+
